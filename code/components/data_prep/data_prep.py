@@ -76,7 +76,7 @@ def main():
 
     print("input data:", args.data)
 
-    credit_df = pd.read_excel(args.data, header=1, index_col=0)
+    credit_df = pd.read_csv(args.data, header=1, index_col=0)
 
 
     ##### Text Preprocessing #####
@@ -113,9 +113,9 @@ def main():
     )
 
     # output paths are mounted as folder, therefore, we are adding a filename to the path
-    credit_train_df.to_csv(os.path.join(args.train_data, "data.csv"), index=False)
+    credit_train_df.to_csv(os.path.join(args.train_data, "reviews_job.csv"), index=False)
 
-    credit_test_df.to_csv(os.path.join(args.test_data, "data.csv"), index=False)
+    credit_test_df.to_csv(os.path.join(args.test_data, "reviews_job.csv"), index=False)
 
     # Stop Logging
     mlflow.end_run()
