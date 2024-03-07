@@ -15,4 +15,6 @@ dependencies:
     - psutil>=5.8,<5.9
     - tqdm>=4.59,<4.60
     - ipykernel~=6.0
-    - matplotlib
+    - matplotlib==3.7.5
+    - nltk==3.8.1
+    - beautifulsoup4==4.12.3
